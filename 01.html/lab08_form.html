@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 폼</title>
+</head>
+<body>
+    <div id="top1">
+        <h2>지금까지 공부한 내용 페이지 리스트</h2>
+        <!-- 바로 가기를 위한 링크 태그 (앵커# 사용) -->
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab01_test.html">lab01</a>
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab02_text.html">lab02</a>
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab03_basic.html">lab03</a>
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab04_block_inline.html">lab04</a>
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab05_tag.html">lab05</a>
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab06_link.html">lab06</a>
+        <a href="https://dogdia128.github.io/web_dev/01.html/ex01_introduce(blank).html">ex01</a> 
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab07_semantic.html">lab07</a> 
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab08_form.html">lab08</a> 
+    </div>
+    <h1>로그인 폼</h1>
+    <!-- 폼(form) : 사용자의 입력을 받는 태그 -->
+    <form action="">
+        ID : <input type="text"><br>
+        PW : <input type="password"><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h1>네이버 검색 폼</h1>
+    <!-- get 방식 : 입력받은 데이터를 주소창을 통해 전달 -->
+    <form action="https://search.naver.com/search.naver" method="get">
+    <input type="text" name="query">
+    <input type="submit" value="검색">
+    </form>
+    <!-- action 속성 : 폼 데이터를 받을 웹페이지의 주소 교재126p -->
+    <!-- https://www.google.com/search -->
+    <h1>구글 검색 폼</h1> 
+    <form action="https://www.google.com/search" method="get" target="_blank">
+    <input type="text" name="query" minlength="5">
+    <input type="submit" value="검색">
+    </form>
+    <hr>
+    <h1>input 태그</h1>
+    <h2>텍스트 입력</h2>
+    input text <input type="text" name="test" placeholder="이름을 입력해주세요" size="20" maxlength="10" minlength="3"><br>
+    input text <input type="text" name="test" placeholder="이름을 입력해주세요" size="30"><br>
+    input password <input type="password"><br>
+    <textarea cols="30" rows="10">
+        텍스트에리어
+    </textarea> <br>
+    나라이름 : <input type="text" list="country">
+    <datalist id="country">
+        <option value="한국">
+        <option value="미국">
+        <option value="일본">
+        <option value="중국">
+    </datalist>
+    <hr>
+    <h1>버튼 만들기</h1>
+    <input type="button" value="새 버튼"
+    onclick="alert('버튼을 누르셨네요!')"
+    >
+    <button type="button">새 버튼2</button>
+    <form action="">
+        <input type="text" name="text">
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+        <button type="reset">초기화2</button>
+        <button type="submit">제출</button>
+    </form>
+    <!-- https://image.flaticon.com/icons/svg/2485/2485906.svg -->
+    <input type="image" src="https://image.flaticon.com/icons/svg/2485/2485906.svg" width="100px" height="100px" alt="">
+    <button type="button"><img src="https://image.flaticon.com/icons/svg/2485/2485906.svg" width="100px" height="100px" alt=""></button>
+    <h1>선택형 입력</h1>
+    <!-- 목록을 보여주고 그 중에 사용자가 선택하게 하는 것 -->
+    <h2>체크박스</h2>
+    <form action="">
+        <input type="checkbox" name="rock" value="t" checked>락
+        <input type="checkbox" name="ballad" value="t">발라드
+        <input type="checkbox" name="dance" value="t">댄스
+        <input type="submit">
+    </form>
+    <h2>라디오버튼</h2>
+    <form action="">
+        <input type="radio" name="fast" value="1">롯데리아 
+        <input type="radio" name="fast" value="2">맥도날드 
+        <input type="radio" name="fast" value="3" checked>KFC
+        <input type="submit"> 
+    </form>
+    <h2>콤보박스</h2>
+    <form action="">
+        <select name="food" id="">
+            <option value="1">김치찌개</option>
+            <option value="2">된장찌개</option>
+            <option value="3" selected>순두부찌개</option>
+        </select>
+        <input type="submit">
+    </form>
+    <h1>label</h1>
+    <label>ID : <input type="text"></label> <br>
+    <label for="pw">PW : </label><input type="password" name="" id="pw">
+    <h1>fieldset</h1>
+    <form action="">
+        <fieldset>
+            <legend>자기소개</legend>
+            <label for="">이름 : <input type="text" name="name"></label><br>
+            <label for="">성별 : <label for=""><input type="radio" name="gender" value="m">남성</label><label for=""><input type="radio" name="gender" value="f">여성</label></label>
+        </fieldset>
+        <fieldset>
+            <legend>좋아하는 음식</legend>
+            <select name="food" id="">
+                <option value="1">새우</option>
+                <option value="2">연어</option>
+                <option value="3">참치</option>
+            </select>
+        </fieldset>
+        <input type="submit">
+    </form>
+    <br>
+    <br>
+    <br>
+      <!-- 맨 위에 있는 요소로 바로 가기 -->
+      <a href="#top">맨 위로 가기(↑)</a>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
