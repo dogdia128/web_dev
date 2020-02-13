@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 색상 및 배경</title>
+    <style>
+        .bgimg {
+            /* https://cdn.pixabay.com/photo/2015/03/05/01/46/sailing-ship-659758_640.jpg */
+            /* 이미지 */
+            background-image: url(https://cdn.pixabay.com/photo/2015/03/05/01/46/sailing-ship-659758_640.jpg);
+            /* 가로 폭 */
+            width:960px ;
+            /* 세로 폭 */
+            height:520px ;
+            /* 반복 여부 */
+            background-repeat: no-repeat! important;
+             /* background-repeat: no-repeat; 반복없음 */
+             background-repeat: repeat-x; 
+             /* background-repeat: repeat-x; x축(가로)으로 반복 */
+             background-repeat: repeat-y; 
+             /* background-repeat: repeat-y; y축(세로)으로 반복 */
+             background-repeat: repeat;
+              /* background-repeat: repeat; x축y축모두반복 (기본값) */            
+        }
+
+        .bgposition {
+            background-color: beige;
+            height: 400px;
+            font-size: 20px;
+            background-image: url(https://cdn2.iconfinder.com/data/icons/animals-nature-2/50/1F986-duck-128.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            /* 이미지를 오른쪽으로 이동 */
+            background-position: right bottom;
+            /* 이미지를 오른쪽 아래로 이동 */
+            background-position: center;
+            /* 가로기준 : {left,right,center}, 
+            세로기준 : {top, center, bottom} */
+            background-position: 200px 200px;
+            /*  background-position: 200px 200px; 이미지파일의 왼쪽 위 꼭지점을 기준으로 움직인다. */
+        }
+
+        .bgattachment {
+            background-image: url(https://cdn2.iconfinder.com/data/icons/thesquid-ink-40-free-flat-icon-pack/64/rubber-duck-128.png);
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-attachment: fixed;
+            /* background-attachment: fixed; 브라우저상에서 한 위치에 고정된다는 뜻, 따라서 브라우저의 스크롤을 움직여 좌우로 움직일때마다 이미지는 그 브라우저의 이동에 맞춰 이동반경 내에서 브라우저의 한지점에서 따라다닌다. */
+        }
+
+        .bgshorthand {
+            height: 600px;
+            /* background-image: url(https://cdn2.iconfinder.com/data/icons/thesquid-ink-40-free-flat-icon-pack/64/rubber-duck-128.png);
+            background-color: skyblue;
+            background-attachment: fixed;
+            background-position: top right;
+            background-repeat: no-repeat;
+            위 네가지속성을 하나의 background:에 각각의 속성값을 전부 넣어 한번에표현가능하다.  */
+            background: url(https://cdn2.iconfinder.com/data/icons/thesquid-ink-40-free-flat-icon-pack/64/rubber-duck-128.png) skyblue fixed top right no-repeat;
+        }
+
+        .bgsize {
+            height: 240px;
+            background-image: url(https://cdn.pixabay.com/photo/2016/02/19/10/13/nght-sky-1209124_960_720.jpg);
+            /* contain은 모든 이미지가 보일 수 있게
+            가장 짧은 면을 기준으로 사이즈 변경 */
+
+            /* cover는 가장 긴 면을 기준으로 덮어줄 수 있게 설정
+                이미지가 짤릴 수 있음
+             */
+
+            /* px % 등으로 직접 사이즈 지정 가능 */
+        }
+
+        .bggradient {
+            height: 500px;
+                    /* 방향 */
+                    /* 본인이 쓰고 싶은 색깔의 수 - 1 분의 1 씩 % 지정 */
+        }
+
+        .bginsta {
+            height: 500px;
+                    /* xxdeg */
+                    /* 본인이 쓰고 싶은 색깔의 수 - 1 분의 1 씩 % 지정 */
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        <h2>챕터별 목차</h2>
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab01_test.html">html(html/lab01)</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/01_syntax/01_blank/lab00_intro.html">css.syntax(syntax/lab00)</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab01_background.html">css.basic(basic/lab01)</a>
+    </aside>
+    <aside>
+        <h2>지금까지 공부한 css.basic 페이지 리스트</h2>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab01_background.html">lab01</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab02_font_text.html">lab02</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab03_link.html">lab03</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab04_list_table.html">lab04</a> 
+    </aside> 
+    <h1>색상</h1>
+    <p style="color: red;">빨간색</p>
+    <p style="color: rgb(255, 0, 0);">빨간색(rgb)</p>
+    <p style="color: #ff0000;">빨간색(hex)</p>
+    <p style="color: #f0e3ff;">1</p>
+    <p style="color: #d89cf6;">2</p>
+    <p style="color: #916dd5;">3</p>
+    <p style="color: #3e206d;">4</p>
+    <br><br>
+    <hr>
+    <h1>배경</h1>
+    <h2>배경 색</h2>
+    <div style="background-color: red;">배경색 지정입니다</div>
+    <div style="background-color: rgb(255, 0, 0);">배경색 지정입니다 (rgb)</div>
+    <h2>배경 이미지</h2>
+    <div class="bgimg">배경이미지입니다</div>
+    <br><br>
+    <h2>배경 포지션</h2>
+    <div class="bgposition">배경 위치 설정</div>
+    <br><br>
+    <h2>배경 고정</h2>
+    <div class="bgattachment">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusamus deleniti quaerat ducimus commodi provident sunt dolores tempora esse iure dolore, distinctio minus alias pariatur magni officiis perferendis quidem doloribus.
+        Praesentium ipsum, totam, vero ad nesciunt ut eos explicabo deserunt porro quaerat dolores aliquid temporibus aut fugiat, tempore qui quasi repudiandae beatae asperiores non odit. Eius et minus id illum?
+        Sit neque eaque soluta ad quidem, necessitatibus mollitia animi esse tempore dignissimos culpa pariatur veniam quo labore ea perferendis quia eligendi tenetur adipisci a, dolores eius beatae magnam. Eius, alias!
+        Hic aperiam ratione repellendus vel iste fuga commodi facere veniam cupiditate odit nostrum qui, aliquam ducimus corrupti totam laudantium? Porro reprehenderit, reiciendis molestiae eaque cumque repellat a sit excepturi minima!
+        Ex, minima dicta! Eos obcaecati debitis ab at amet magni sunt quos repellendus sapiente. Quasi, voluptatibus quisquam praesentium, animi quos libero deserunt labore mollitia omnis dolorum voluptatum deleniti vitae dolores.
+        Dolorem esse, aut fuga impedit, repellendus incidunt earum est tempore sequi, voluptates rem voluptatibus. Quisquam assumenda earum odit voluptates, esse facere pariatur voluptas mollitia, facilis impedit rem, quod eum recusandae.
+        Natus, suscipit est, ipsam facere quaerat, impedit quibusdam illo repellendus nulla nesciunt quae non voluptas soluta odio rem eum modi. Ratione vero minima dicta, perspiciatis dolorum nulla repellendus voluptates similique!
+        Accusantium exercitationem ullam blanditiis delectus sint, illum necessitatibus iusto eius minima ad a earum repellendus rem commodi quae sed consequuntur debitis, eligendi repellat! Itaque quidem distinctio rerum cum nemo nisi!
+        Nam quia beatae accusantium mollitia est vero et quos quis modi reiciendis! Eos laborum dolor, deserunt doloremque explicabo fuga adipisci facere nemo placeat porro architecto molestiae saepe consectetur suscipit. Odit.
+        Autem corrupti vitae, ipsam facilis reprehenderit tenetur ad aliquam necessitatibus, distinctio at est ut iusto suscipit! Doloremque maiores delectus culpa asperiores quibusdam, expedita dolores itaque, modi recusandae, tempora quis tempore!
+        Est ad commodi suscipit rerum quam pariatur autem, molestiae voluptatibus, sed numquam sint expedita, consequatur labore nostrum. Labore possimus saepe minima quibusdam expedita, voluptates facere quo laudantium tenetur, reiciendis repudiandae?
+        Provident necessitatibus at ad blanditiis cum fuga dolor, reiciendis quam distinctio placeat iusto accusamus, molestias deserunt voluptatum consectetur inventore quidem sit sequi officiis aliquid? Consectetur facilis iusto similique consequuntur nobis?
+        Dolorem vitae ex hic sequi minus expedita id illo optio ut, ipsa molestiae, ad dicta labore aliquam reiciendis repudiandae vero eius? Officia dignissimos at nihil optio sequi enim deleniti eaque.
+        Quaerat labore ipsam earum! Animi accusamus architecto corrupti ullam aperiam, eligendi hic libero natus tempore consectetur magnam, repellat sapiente maiores suscipit quis vel sunt quisquam soluta unde assumenda laudantium cupiditate!
+        Natus ipsum alias veniam aperiam illo. Rem, fuga nisi nulla accusamus totam, sunt nobis perferendis cupiditate laboriosam a accusantium iusto harum. Consequuntur placeat tempore minima quidem. Consequatur iste quisquam esse.
+        Maiores voluptatibus, voluptatum aspernatur blanditiis molestiae, asperiores quia harum commodi porro repudiandae perferendis incidunt aliquam tempore! Culpa, quas mollitia dignissimos, ea a ad distinctio consequatur architecto iusto magni asperiores hic.
+        Pariatur ab eum blanditiis, accusamus obcaecati omnis, voluptas cumque vitae rerum error quos excepturi provident et, laborum qui temporibus! Ut eaque a praesentium officia nemo unde, est tempore quis architecto!
+        Incidunt dolorem in ipsam suscipit facilis totam eveniet quibusdam. Sit ratione unde praesentium dicta debitis placeat facilis exercitationem expedita est, repudiandae sapiente non reprehenderit facere omnis deserunt id natus maxime.
+        Inventore sit pariatur dolorum, unde saepe nemo aspernatur quisquam cupiditate modi placeat quia fugit labore eum consectetur totam tenetur. Nemo sed itaque nesciunt! Maiores, laborum molestiae minus ipsum facere ab!
+        Aut quo vel provident ipsam debitis, asperiores itaque rerum doloribus fugit tempora fugiat assumenda nulla magnam eos animi magni dolores neque? Commodi non error fugiat aut expedita deleniti quas neque.
+    </div>
+    <h2>배경 축약</h2>
+    <div class="bgshorthand">
+        축약 버전 입니다!
+    </div>
+    <br><br>
+    <br><br>
+    <h2>배경 사이즈</h2>
+    <div class="bgsize">
+        배경 크기를 설정하겠습니다
+    </div>
+    <br>
+    <br>
+    <h2>배경 그라디언트</h2>
+    <div class="bggradient">인스타그램처럼!!</div>
+    <br>
+    <div class="bginsta">진짜 인스타그램처럼!!!</div>
+    <br>
+    <br>
+</body>
+
+</html>
