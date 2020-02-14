@@ -7,31 +7,52 @@
     <title>CSS 리스트와 테이블</title>
     <style>
         ul {
-            background-color: ;
+            background-color: pink;
+            /* list-style: decimal; */
+            list-style-image: url(https://cdn0.iconfinder.com/data/icons/iconsweets2/40/whale.png);
         }
         .inside {
-
+            list-style-position: inside;
         }
-        ol {
-
+        ol {    
+            list-style-type: lower-roman;
+            list-style-type: disc;
         }
         .shortHand {
-
+            list-style: inside url(https://cdn0.iconfinder.com/data/icons/iconsweets2/40/whale.png);
         }
         table, td {
-
+            border: 1px solid grey;
         }
         table {
-
+            border-collapse: collapse;
         }
         td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
         }
         .bottom {
-
+            vertical-align: middle;
+            
         }
     </style>
 </head>
 <body>
+    <aside>
+        <h2>챕터별 목차</h2>
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab01_test.html">html(html/lab01)</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/01_syntax/01_blank/lab00_intro.html">css.syntax(syntax/lab00)</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab01_background.html">css.basic(basic/lab01)</a>
+    </aside>
+    <aside>
+        <h2>지금까지 공부한 css.basic 페이지 리스트</h2>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab01_background.html">lab01</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab02_font_text.html">lab02</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab03_link.html">lab03</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab04_list_table.html">lab04</a> 
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/ex01_basic(blank).html">ex01</a> 
+    </aside> 
     <h1>CSS 리스트</h1>
     <h2>순서 없는 리스트</h2>
     <ul>
@@ -74,6 +95,9 @@
             <td>9</td>
         </tr>
     </table>
-    <br><br>
+    <br><br><br>
+    <br>
+    <br>
+    <br>
 </body>
 </html>

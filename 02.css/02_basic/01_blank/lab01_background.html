@@ -65,24 +65,37 @@
         .bgsize {
             height: 240px;
             background-image: url(https://cdn.pixabay.com/photo/2016/02/19/10/13/nght-sky-1209124_960_720.jpg);
+            /* background-size를 사용하여 배경 이미지의 크기를 변경 할 수 있다 */
             /* contain은 모든 이미지가 보일 수 있게
             가장 짧은 면을 기준으로 사이즈 변경 */
-
+            /* background-size: contain; */
+            /* background-repeat: no-repeat; */
             /* cover는 가장 긴 면을 기준으로 덮어줄 수 있게 설정
                 이미지가 짤릴 수 있음
              */
-
+             /* background-size: cover; */
+             background-size: 320px 75%;
             /* px % 등으로 직접 사이즈 지정 가능 */
         }
 
         .bggradient {
             height: 500px;
+            background-image: linear-gradient(
+                    to bottom left, red, yellow, green, blue
+            );
                     /* 방향 */
                     /* 본인이 쓰고 싶은 색깔의 수 - 1 분의 1 씩 % 지정 */
+                    
         }
 
         .bginsta {
             height: 500px;
+            background-image: linear-gradient(
+                    to bottom left, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5
+            ) ;
+            background-size: 800px 450px;
+            background-repeat: no-repeat;
+            background-position: center;
                     /* xxdeg */
                     /* 본인이 쓰고 싶은 색깔의 수 - 1 분의 1 씩 % 지정 */
         }
@@ -102,6 +115,7 @@
         <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab02_font_text.html">lab02</a>
         <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab03_link.html">lab03</a>
         <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab04_list_table.html">lab04</a> 
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/ex01_basic(blank).html">ex01</a> 
     </aside> 
     <h1>색상</h1>
     <p style="color: red;">빨간색</p>
