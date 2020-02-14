@@ -15,26 +15,40 @@
 
         .px {
             /* 스크린의 픽셀(pixel)을 기준으로 하는 절대적 크기 */
+            width: 320px;
+            height: 160px;
         }
 
         .percent {
             /* 브라우저 크기의 % */
+            /* 상위요소에 width나 height가 지정 됐을 경우 해당만큼 % 적용 */
+            width: 50% ;
+            height: 200px ;
         }
 
         .em {
             /* 자신의 폰트 크기가 1이라고 할 때 배수 단위 */
+            font-size: 40px;
+            width: 10m ;
+            height: 10em ;
         }
 
         .em2 {
             /* 상위 요소의 폰트 크기를 상속 받음 */
+            width: 5em;
+            height: 5em;
         }
 
         .rem {
-            /* 최상위 요소 (html)의 폰트 크기 기준 (상속 X) */
+            /* 최상위 요소 (html)의 폰트 크기(기본 폰트사이즈 16px) 기준 (상속 X)으로 yrem은 16px*y배가 된다.   */
+            width: 20rem;
+            height: 20rem;
         }
 
         .rem2 {
             /* 상위 요소의 폰트 크기에 영향 받지 않음 */
+            width: 5rem;
+            height: 5rem;
         }
 
         /* 최대 & 최소 */
@@ -46,11 +60,22 @@
 </head>
 
 <body>
+    <aside>
+        <h2>챕터별 목차</h2>
+        <a href="https://dogdia128.github.io/web_dev/01.html/lab01_test.html">html(html/lab01)</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/01_syntax/01_blank/lab00_intro.html">css.syntax(syntax/lab00)</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/02_basic/01_blank/lab01_background.html">css.basic(basic/lab01)</a>
+        <a href="https://dogdia128.github.io/web_dev/02.css/03_box_model/01.blank/lab01_size(share).html">css.box_model(boxmodel/lab01)</a>
+    </aside>
+    <aside>
+        <h2>지금까지 공부한 css.basic 페이지 리스트</h2>
+        <a href="https://dogdia128.github.io/web_dev/02.css/03_box_model/01.blank/lab01_size(share).html">lab01</a>
+    </aside> 
     <h1>크기 조정</h1>
     <h2>절대 크기 & 상대 크기</h2>
     <div>
         기본 설정은 auto
-        (가로 100%, 세로는 컨텐츠 양에 따라 달라짐)
+        (가로 100%, 세로는 컨텐츠 양에 따라 달라짐)        
     </div>
     <br>
     <div class="px">
@@ -59,6 +84,7 @@
     <br>
     <div class="percent">
         %를 통한 크기 조정
+        <div style="height: 20%">%</div>
     </div>
     <br>
     <div class="em">
