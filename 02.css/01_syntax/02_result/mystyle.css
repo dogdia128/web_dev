@@ -5,3 +5,11 @@ h3 {
     /* css 단축키 사용 가능! */
     font-size: 5px;    
 }
+.santa {
+    height: 600px;
+    /* background-image: url(c:/web_dev/startbootstrap-scrolling-nav-gh-pages/산타1.png)
+    background-attachment: fixed;
+    background-position: top right;
+    background-repeat: no-repeat;
+   .  */
+    background: url(c:/web_dev/startbootstrap-scrolling-nav-gh-pages/산타1.jpg) white fixed top right no-repeat;
